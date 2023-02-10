@@ -1,7 +1,13 @@
+body{
+  margin: 0;
+}
 .App {
   text-align: center;
 }
 
+body{
+  background-color: lightblue;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -37,6 +43,20 @@
 .city-parent{
   position:relative;
 }
+
+.citypageflag{
+  width:100px
+}
+
+.top-image{
+  height:auto;
+  width:100%;
+  object-fit: cover;
+  display:block;
+  height:300px;
+  margin-left:0;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -46,14 +66,10 @@
   }
 }
 
-@media only screen and (max-width: 576px) {
+
+@media only screen and (max-width: 292px) {
   .flag{
-    display: none;
+    display:none;
   }
 }
 
-@media only screen and (max-width: 370px) {
-  .latlong{
-    display: none;
-  }
-}
