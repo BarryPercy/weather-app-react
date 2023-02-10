@@ -1,14 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import App from './App'
-import store from './redux/store'
-import { Provider } from 'react-redux'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
+import Home from './components/Home'
+import City from './components/City'
+import MyNav from './components/MyNav'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+function App() {
+  return (
+    <>
+      <MyNav/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/cities/:lat/:long" element={<CityPage/>} />
+          {/* <Route path="/favourites" element={<Favourites />} /> */}
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
 
-root.render(
-    <Provider store={store}>
-        <App />
-    </Provider>
-)
+export default App
