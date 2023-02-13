@@ -39,7 +39,6 @@ const CityPage = (props) => {
             if (response.ok) {
                 forecastData = await response.json();
                 console.log("forecastData",forecastData)
-                setForecast(forecastData);
                 //setShowForecast(true)
             } else {
                 alert('Error fetching results');
